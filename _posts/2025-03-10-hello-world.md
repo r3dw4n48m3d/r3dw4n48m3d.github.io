@@ -1,7 +1,7 @@
 ---
 title: "Hello World"
 categories: [Hello World]
-tags: [Hello World]
+tags: [hello world]
 ---
 
 # Hello World
