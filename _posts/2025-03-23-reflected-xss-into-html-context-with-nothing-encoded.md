@@ -1,9 +1,9 @@
 ---
-title: "Reflected XSS into HTML context with nothing encoded"
+title: "Lab : Reflected XSS into HTML context with nothing encoded"
 author: r3dw4n
 date: 2025-03-23 00:00:00 +0600
 categories: [PortSwigger]
-tags: [lab,labsolving,portswigger,xss]     # TAG names should always be lowercase
+tags: [lab,labsolving,portswigger,xss,rxss, reflectedxss]     # TAG names should always be lowercase
 render_with_liquid: false
 media_subpath: /images/reflected-xss-into-html-context-with-nothing-encoded
 image:

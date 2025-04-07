@@ -3,7 +3,7 @@ title: "Lab : Stored XSS into HTML context with nothing encoded"
 author: r3dw4n
 date: 2025-03-30 00:00:00 +0600
 categories: [PortSwigger]
-tags: [lab,labsolving,portswigger,xss]     # TAG names should always be lowercase
+tags: [lab,labsolving,portswigger,xss, storedxss, stored]     # TAG names should always be lowercase
 render_with_liquid: false
 media_subpath: /images/portswigger-lab-stored-xss-into-html-context-with-nothing-encoded
 image:
