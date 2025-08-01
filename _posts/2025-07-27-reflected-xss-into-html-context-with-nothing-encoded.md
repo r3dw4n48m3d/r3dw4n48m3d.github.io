@@ -10,9 +10,15 @@ image:
   path: portswigger_logo.png
 ---
 
+> Web Security Academy **#1**
+{: .prompt-warning }
+
 ## Lab: Reflected XSS into HTML context with nothing encoded
 
 ### Lab Description
+
+> Lab Level - *APPRENTICE*
+{: .prompt-warning }
 
 This lab contains a simple reflected cross-site scripting vulnerability in the search functionality.
 
