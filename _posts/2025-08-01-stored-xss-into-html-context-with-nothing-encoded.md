@@ -68,7 +68,7 @@ _Confirming HTML injection_
 - Now every time a user visit the blog post that have the xss payload injected they will saw an `alert` popup. To confirm this I visit the same page that I inject xss payload and saw an alert with `R3DW4N` text.
 
 ![06](6.png){: width="600" height="500" .rounded-10 }
-_Confirming XSS _
+_Confirming XSS_
 
 And that's it for this write-ups. If you want to connect with me, here are my social media links
 
