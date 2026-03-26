@@ -1,46 +1,52 @@
 export default function Certifications() {
   const certifications = [
     {
-      name: 'Certified Red Team Professional (CRTP)',
-      issuer: 'Altered Security',
-      date: '2024',
-      verifyUrl: 'https://www.credential.net/example-crtp',
-      icon: '🔴',
+      name: "Jr Penetration Tester",
+      issuer: "Byte Capsule",
+      date: "2024",
+      verifyUrl:
+        "https://drive.google.com/file/d/1YBrNra5KIMi4_MUQKnYohVIHVkjkWZQN/view?usp=sharing",
+      icon: "🔴",
     },
     {
-      name: 'eLearnSecurity Junior Penetration Tester (eJPT)',
-      issuer: 'INE Security',
-      date: '2024',
-      verifyUrl: 'https://certs.ine.com/example-ejpt',
-      icon: '🎯',
+      name: "Ethical Hacking For Professional",
+      issuer: "Byte Capsule",
+      date: "2024",
+      verifyUrl:
+        "https://drive.google.com/file/d/1xvtpmgiPgyCdzEPJgyVsia4BMpowlQ6P/view?usp=sharing",
+      icon: "🎯",
     },
     {
-      name: 'Certified Red Team Analyst (CRTA)',
-      issuer: 'CyberWarFare Labs',
-      date: '2024',
-      verifyUrl: 'https://cyberwarfare.live/example-crta',
-      icon: '⚔️',
+      name: "Introduction to Cloud Security",
+      issuer: "Simplilearn",
+      date: "2024",
+      verifyUrl:
+        "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxNzU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzcwMTA0NF83ODY5NTU0MTczNDk0NzIwMzMxMS5wbmciLCJ1c2VybmFtZSI6IlJlZHdhbiBBaG1lZCJ9&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4250%2FIntroduction-to-Cloud-Security%2Fcertificate%2Fdownload-skillup&%24web_only=true",
+      icon: "⚔️",
     },
     {
-      name: 'Certified Network Security Practitioner (CNSP)',
-      issuer: 'The SecOps Group',
-      date: '2023',
-      verifyUrl: 'https://secops.group/example-cnsp',
-      icon: '🛡️',
+      name: "Getting Started in API Pen-Testing",
+      issuer: "APIsec University",
+      date: "2025",
+      verifyUrl:
+        "https://www.credly.com/badges/0efef264-0fb9-4d60-95e5-9077347c96d9/linked_in_profile",
+      icon: "🛡️",
     },
     {
-      name: 'CompTIA Security+',
-      issuer: 'CompTIA',
-      date: '2023',
-      verifyUrl: 'https://www.credly.com/example-secplus',
-      icon: '🔐',
+      name: "Knight CTF 2025",
+      issuer: "Knight CTF",
+      date: "2025",
+      verifyUrl:
+        "https://drive.google.com/file/d/1ypCmQmsAQWRkk3y3gkMe_Ibwqmq7rInK/view",
+      icon: "🔐",
     },
     {
-      name: 'Certified Ethical Hacker (CEH)',
-      issuer: 'EC-Council',
-      date: '2023',
-      verifyUrl: 'https://aspen.eccouncil.org/example-ceh',
-      icon: '💀',
+      name: "SMP CTF 2025",
+      issuer: "SMP CTF",
+      date: "2024",
+      verifyUrl:
+        "https://drive.google.com/file/d/1UUebVzLEt4Gyo9B8PoaJLWlDrNNWvXYQ/view?usp=sharing",
+      icon: "💀",
     },
   ];
 
@@ -54,7 +60,9 @@ export default function Certifications() {
             <span className="text-green-500">/&gt;</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto rounded-full shadow-[0_0_20px_rgba(0,255,0,0.5)]" />
-          <p className="text-green-600 mt-4">// Verified credentials demonstrating expertise</p>
+          <p className="text-green-600 mt-4">
+            Verified credentials demonstrating expertise
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -72,7 +80,9 @@ export default function Certifications() {
                   {cert.name}
                 </h3>
                 <p className="text-green-600 text-sm mb-1">{cert.issuer}</p>
-                <p className="text-green-800 text-xs mb-4">Issued: {cert.date}</p>
+                <p className="text-green-800 text-xs mb-4">
+                  Issued: {cert.date}
+                </p>
 
                 <a
                   href={cert.verifyUrl}
@@ -80,8 +90,18 @@ export default function Certifications() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/50 rounded-lg text-cyan-400 text-sm hover:bg-cyan-500/20 hover:border-cyan-400 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)]"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   Verify Credential
                 </a>

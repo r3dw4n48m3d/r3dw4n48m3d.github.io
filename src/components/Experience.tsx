@@ -1,39 +1,39 @@
 export default function Experience() {
   const experiences = [
     {
-      title: 'Security Mentor',
-      company: 'Hack Secure, India',
-      type: 'Remote',
-      period: '2024 - Present',
+      title: "Bug Bounty Hunter",
+      company: "HackerOne",
+      type: "Remote",
+      period: "2023 - Present",
       points: [
-        'Mentored interns in pentesting labs, CTFs, and real-world simulations',
-        'Improved enumeration, reporting, and ethical tool use workflows',
-        'Guidance on recon, exploitation, privilege escalation, and remediation',
-        'Contributed write-ups and lab insights',
+        "Got 4+ Hall of Fame mentions.",
+        "200+ valid vulnerability reports.",
+        "No. 1 in Bangladesh VDP leaderboard 2025",
+        "37th globally in HackerOne's Department of Defense program",
       ],
     },
     {
-      title: 'Security Analyst Intern',
-      company: 'Hack Secure, India',
-      type: 'Remote',
-      period: '2023 - 2024',
+      title: "Jr Penetration Tester Intern",
+      company: "Byte Capsule",
+      type: "Remote",
+      period: "2024 (Sep) - 2024 (Nov)",
       points: [
-        'Vulnerability scans, directory enumeration, misconfiguration discovery',
-        'Web/network pentests using Nmap, Burp Suite, Metasploit, Wireshark',
-        'Hash cracking with Hashcat, credential strength evaluation',
-        'Security reports and developer remediation support',
+        "Vulnerability scans, directory enumeration, misconfiguration discovery",
+        "Web/network pentests using Nmap, Burp Suite, Metasploit, Wireshark",
+        "Cloud security assessments",
+        "Security reports and developer remediation support",
       ],
     },
     {
-      title: 'Bug Bounty Hunter',
-      company: 'Independent',
-      type: 'Freelance',
-      period: '2022 - Present',
+      title: "SQA Tester",
+      company: "Byte Capsule",
+      type: "Remote",
+      period: "2025",
       points: [
-        'Active participation in HackerOne and Bugcrowd programs',
-        'Discovered and reported critical vulnerabilities',
-        'Focus on web application security testing',
-        'Continuous learning and skill development',
+        "Tested web applications for security vulnerabilities",
+        "Check Quality Assurance of web applications",
+        "Collaborated with developers to fix security issues",
+        "Conducted regression testing to ensure fixes were effective",
       ],
     },
   ];
@@ -44,7 +44,7 @@ export default function Experience() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-green-500">&lt;</span>
-            <span className="text-cyan-400">Professional Experience</span>
+            <span className="text-cyan-400">Experience</span>
             <span className="text-green-500">/&gt;</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto rounded-full shadow-[0_0_20px_rgba(0,255,0,0.5)]" />
@@ -59,18 +59,22 @@ export default function Experience() {
               <div
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-500 border-4 border-black shadow-[0_0_15px_#0ff]" />
 
                 {/* Content */}
-                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} pl-8 md:pl-0`}>
+                <div
+                  className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"} pl-8 md:pl-0`}
+                >
                   <div className="bg-black/60 border border-green-900/50 rounded-lg p-6 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,255,0.1)]">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-cyan-400 text-lg">⚡</span>
-                      <h3 className="text-xl font-bold text-green-400">{exp.title}</h3>
+                      <h3 className="text-xl font-bold text-green-400">
+                        {exp.title}
+                      </h3>
                     </div>
                     <div className="flex flex-wrap items-center gap-2 mb-4">
                       <span className="text-green-600">{exp.company}</span>
@@ -82,7 +86,10 @@ export default function Experience() {
                     </div>
                     <ul className="space-y-2">
                       {exp.points.map((point, i) => (
-                        <li key={i} className="flex items-start gap-2 text-green-500/80 text-sm">
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-green-500/80 text-sm"
+                        >
                           <span className="text-cyan-500 mt-1">▹</span>
                           {point}
                         </li>

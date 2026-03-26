@@ -24,16 +24,18 @@ export default function About() {
               <p className="text-green-600 mb-2">$ cat about.txt</p>
               <div className="text-green-400 space-y-3">
                 <p>
-                  <span className="text-cyan-400">Name:</span> CyberSec Professional
+                  <span className="text-cyan-400">Name:</span> Redwan Ahmed
                 </p>
                 <p>
-                  <span className="text-cyan-400">Role:</span> Junior Penetration Tester
+                  <span className="text-cyan-400">Role:</span> Uncertified
+                  Hacker
                 </p>
                 <p>
-                  <span className="text-cyan-400">Focus:</span> Offensive Security
+                  <span className="text-cyan-400">Focus:</span> Offensive
+                  Security
                 </p>
                 <p>
-                  <span className="text-cyan-400">Status:</span>{' '}
+                  <span className="text-cyan-400">Status:</span>{" "}
                   <span className="text-green-500">● Active</span>
                 </p>
               </div>
@@ -44,33 +46,43 @@ export default function About() {
           {/* Description */}
           <div className="space-y-6">
             <p className="text-green-400 leading-relaxed">
-              I'm a <span className="text-cyan-400 font-semibold">junior offensive security professional</span> with 
-              a strong passion for penetration testing and adversary simulation. I focus on manual enumeration, 
-              Active Directory attack chains, and web/network exploitation to identify and demonstrate real-world 
-              security weaknesses.
+              I'm a{" "}
+              <span className="text-cyan-400 font-semibold">
+                Junior Offensive Security Professional
+              </span>{" "}
+              with a strong passion for penetration testing and adversary
+              simulation. I focus on manual enumeration, Active Directory attack
+              chains, and web/network exploitation to identify and demonstrate
+              real-world security weaknesses.
             </p>
             <p className="text-green-500/80 leading-relaxed">
-              My approach emphasizes <span className="text-cyan-400">realistic threat modeling</span> — from initial 
-              reconnaissance through lateral movement to domain compromise — mirroring the tactics used by real-world 
-              adversaries.
+              My approach emphasizes{" "}
+              <span className="text-cyan-400">realistic threat modeling</span> —
+              from initial reconnaissance through lateral movement to domain
+              compromise — mirroring the tactics used by real-world adversaries.
             </p>
-            <p className="text-green-500/80 leading-relaxed">
-              I hold certifications including <span className="text-cyan-400">CRTP</span>, <span className="text-cyan-400">eJPT</span>, 
-              <span className="text-cyan-400"> CRTA</span>, and <span className="text-cyan-400">CNSP</span>.
-            </p>
+            {/* <p className="text-green-500/80 leading-relaxed">
+              I hold certifications including{" "}
+              <span className="text-cyan-400">CRTP</span>,{" "}
+              <span className="text-cyan-400">eJPT</span>,
+              <span className="text-cyan-400"> CRTA</span>, and{" "}
+              <span className="text-cyan-400">CNSP</span>.
+            </p> */}
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-6">
               {[
-                { value: '50+', label: 'CTFs Completed' },
-                { value: '4+', label: 'Certifications' },
-                { value: '20+', label: 'Projects' },
+                { value: "4+", label: "Hall Of Fame" },
+                { value: "5+", label: "Certifications" },
+                { value: "2+", label: "Projects" },
               ].map((stat, index) => (
                 <div
                   key={index}
                   className="text-center p-4 border border-green-900/50 rounded-lg hover:border-cyan-500 transition-all duration-300"
                 >
-                  <div className="text-2xl font-bold text-cyan-400">{stat.value}</div>
+                  <div className="text-2xl font-bold text-cyan-400">
+                    {stat.value}
+                  </div>
                   <div className="text-green-600 text-sm">{stat.label}</div>
                 </div>
               ))}
