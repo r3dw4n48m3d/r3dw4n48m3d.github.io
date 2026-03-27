@@ -4,21 +4,21 @@ export default function Projects() {
       title: "Hacker-WriteUps",
       category: "Collection of Blog Posts",
       image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
+        "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/achievements/hacker-write-ups.png",
       description:
         "A curated collection of detailed write-ups covering various penetration testing engagements, attack simulations, and security assessments across different industries.",
       tags: ["Write-Ups", "Article", "Medium"],
       link: "https://hacker-writeups.github.io/",
     },
     {
-      title: "Web Application Penetration Testing Report",
-      category: "Web Pentest",
+      title: "Hacker-WriteUps Telegram Channel",
+      category: "Post Daily Write-Ups",
       image:
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
       description:
-        "Comprehensive web application security assessment including OWASP Top 10 vulnerability analysis, authentication testing, and injection attack vectors.",
-      tags: ["Burp Suite", "OWASP", "SQL Injection"],
-      link: "#",
+        "A Telegram channel dedicated to sharing daily penetration testing write-ups.",
+      tags: ["Telegram", "Daily Updates", "Write-Ups"],
+      link: "https://t.me/bugbountywrite_ups",
     },
     {
       title: "Remote & Local Credential Harvesting",
@@ -68,7 +68,7 @@ export default function Projects() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-green-500">&lt;</span>
-            <span className="text-cyan-400">Attack Simulations</span>
+            <span className="text-cyan-400">Projects</span>
             <span className="text-green-500">/&gt;</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto rounded-full shadow-[0_0_20px_rgba(0,255,0,0.5)]" />
