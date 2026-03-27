@@ -1,12 +1,12 @@
 export default function Achievements() {
   const achievements = [
     {
-      title: "Top 100 Global CTF Player",
+      title: "No.1 in HackerOne Leaderboard",
       image:
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop",
+        "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/achievements/h1-n1-bd-leaderboard.png",
       description:
-        "Ranked in the top 100 on CTFtime.org with consistent performance across multiple international competitions.",
-      tags: ["CTF", "Competition", "Global"],
+        "No.1 in HackerOne Bangladesh VDP Leaderboard on 2025. Also No.1 on Q1, Q2, Q3 and Q4 of 2025.",
+      tags: ["Bug", "Bug Hunting", "Bangladesh"],
     },
     {
       title: "Bug Bounty Hall of Fame",
