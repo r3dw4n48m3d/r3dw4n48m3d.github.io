@@ -19,35 +19,35 @@ export default function Achievements() {
     {
       title: "Jr Penetration Tester Intern",
       image:
-        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
+        "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/achievements/internship.jpg",
       description:
-        "Completed a successful internship as a Jr Penetration Tester at Byte Capsule, gaining hands-on experience in vulnerability assessments and security testing.",
+        "Completed a successful internship as a Jr Penetration Tester at Byte Capsule",
       tags: ["Internship", "Real-World Experience", "Education"],
     },
-    {
-      title: "Open Source Contributor",
-      image:
-        "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=400&h=300&fit=crop",
-      description:
-        "Active contributor to security tools and frameworks used by the pentesting community.",
-      tags: ["Open Source", "Tools", "Community"],
-    },
-    {
-      title: "HackTheBox Pro Hacker",
-      image:
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
-      description:
-        "Achieved Pro Hacker rank on HackTheBox platform with 50+ machines pwned.",
-      tags: ["HackTheBox", "Pro Hacker", "Labs"],
-    },
-    {
-      title: "Security Research Publication",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-      description:
-        "Published security research papers on novel attack vectors and defense mechanisms.",
-      tags: ["Research", "Publication", "Academic"],
-    },
+    // {
+    //   title: "Open Source Contributor",
+    //   image:
+    //     "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=400&h=300&fit=crop",
+    //   description:
+    //     "Active contributor to security tools and frameworks used by the pentesting community.",
+    //   tags: ["Open Source", "Tools", "Community"],
+    // },
+    // {
+    //   title: "HackTheBox Pro Hacker",
+    //   image:
+    //     "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
+    //   description:
+    //     "Achieved Pro Hacker rank on HackTheBox platform with 50+ machines pwned.",
+    //   tags: ["HackTheBox", "Pro Hacker", "Labs"],
+    // },
+    // {
+    //   title: "Security Research Publication",
+    //   image:
+    //     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+    //   description:
+    //     "Published security research papers on novel attack vectors and defense mechanisms.",
+    //   tags: ["Research", "Publication", "Academic"],
+    // },
   ];
 
   return (

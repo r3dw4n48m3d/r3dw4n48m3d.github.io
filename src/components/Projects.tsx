@@ -1,52 +1,64 @@
 export default function Projects() {
   const projects = [
     {
-      title: 'Multi-Forest Active Directory Lab',
-      category: 'Infrastructure',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-      description: 'Built a complex, four-segment AD lab simulating real-world attack paths like network pivoting, trust relationship exploits, and cross-forest compromise.',
-      tags: ['Active Directory', 'Penetration Testing', 'Network Pivoting'],
-      link: '#',
+      title: "Hacker-WriteUps",
+      category: "Collection of Blog Posts",
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
+      description:
+        "A curated collection of detailed write-ups covering various penetration testing engagements, attack simulations, and security assessments across different industries.",
+      tags: ["Write-Ups", "Article", "Medium"],
+      link: "https://hacker-writeups.github.io/",
     },
     {
-      title: 'Web Application Penetration Testing Report',
-      category: 'Web Pentest',
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop',
-      description: 'Comprehensive web application security assessment including OWASP Top 10 vulnerability analysis, authentication testing, and injection attack vectors.',
-      tags: ['Burp Suite', 'OWASP', 'SQL Injection'],
-      link: '#',
+      title: "Web Application Penetration Testing Report",
+      category: "Web Pentest",
+      image:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
+      description:
+        "Comprehensive web application security assessment including OWASP Top 10 vulnerability analysis, authentication testing, and injection attack vectors.",
+      tags: ["Burp Suite", "OWASP", "SQL Injection"],
+      link: "#",
     },
     {
-      title: 'Remote & Local Credential Harvesting',
-      category: 'Infrastructure',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop',
-      description: 'Demonstrated credential harvesting techniques in Active Directory environments using Mimikatz, SAM dumps, LSASS extraction, and DCSync attacks.',
-      tags: ['Mimikatz', 'Active Directory', 'Credential Theft'],
-      link: '#',
+      title: "Remote & Local Credential Harvesting",
+      category: "Infrastructure",
+      image:
+        "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
+      description:
+        "Demonstrated credential harvesting techniques in Active Directory environments using Mimikatz, SAM dumps, LSASS extraction, and DCSync attacks.",
+      tags: ["Mimikatz", "Active Directory", "Credential Theft"],
+      link: "#",
     },
     {
-      title: 'Kerberos Unconstrained Delegation Abuse',
-      category: 'Infrastructure',
-      image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=400&h=300&fit=crop',
-      description: 'Full exploitation of Kerberos unconstrained delegation misconfigurations to achieve domain-level compromise through TGT extraction and impersonation.',
-      tags: ['Kerberos', 'Delegation', 'Domain Admin'],
-      link: '#',
+      title: "Kerberos Unconstrained Delegation Abuse",
+      category: "Infrastructure",
+      image:
+        "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=400&h=300&fit=crop",
+      description:
+        "Full exploitation of Kerberos unconstrained delegation misconfigurations to achieve domain-level compromise through TGT extraction and impersonation.",
+      tags: ["Kerberos", "Delegation", "Domain Admin"],
+      link: "#",
     },
     {
-      title: 'AdminSDHolder Persistence',
-      category: 'Infrastructure',
-      image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=300&fit=crop',
-      description: 'Demonstrated persistence through AdminSDHolder ACL abuse, maintaining backdoor access to privileged AD groups through SDProp propagation.',
-      tags: ['AdminSDHolder', 'ACL Abuse', 'Persistence'],
-      link: '#',
+      title: "AdminSDHolder Persistence",
+      category: "Infrastructure",
+      image:
+        "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=300&fit=crop",
+      description:
+        "Demonstrated persistence through AdminSDHolder ACL abuse, maintaining backdoor access to privileged AD groups through SDProp propagation.",
+      tags: ["AdminSDHolder", "ACL Abuse", "Persistence"],
+      link: "#",
     },
     {
-      title: 'Automated Vulnerability Scanner',
-      category: 'Tool Development',
-      image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=300&fit=crop',
-      description: 'Custom Python-based vulnerability scanner integrating multiple security tools for comprehensive network and web application assessment.',
-      tags: ['Python', 'Automation', 'Security Tools'],
-      link: '#',
+      title: "Automated Vulnerability Scanner",
+      category: "Tool Development",
+      image:
+        "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=300&fit=crop",
+      description:
+        "Custom Python-based vulnerability scanner integrating multiple security tools for comprehensive network and web application assessment.",
+      tags: ["Python", "Automation", "Security Tools"],
+      link: "#",
     },
   ];
 
@@ -60,7 +72,9 @@ export default function Projects() {
             <span className="text-green-500">/&gt;</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto rounded-full shadow-[0_0_20px_rgba(0,255,0,0.5)]" />
-          <p className="text-green-600 mt-4">// Hands-on projects demonstrating offensive security skills</p>
+          <p className="text-green-600 mt-4">
+            Hands-on projects demonstrating offensive security skills
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -109,10 +123,21 @@ export default function Projects() {
                 <a
                   href={project.link}
                   className="inline-flex items-center gap-2 text-cyan-400 text-sm hover:text-cyan-300 transition-colors"
+                  target="_blank"
                 >
                   View Details
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
                   </svg>
                 </a>
               </div>
