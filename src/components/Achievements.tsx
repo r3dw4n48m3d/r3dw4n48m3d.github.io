@@ -9,20 +9,20 @@ export default function Achievements() {
       tags: ["Bug", "Bug Hunting", "Bangladesh"],
     },
     {
-      title: "Bug Bounty Hall of Fame",
+      title: "DoD Hall of Fame",
       image:
-        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=300&fit=crop",
+        "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/achievements/h1-global-all-time-hof.png",
       description:
-        "Recognized in multiple bug bounty programs for discovering critical security vulnerabilities.",
-      tags: ["Bug Bounty", "Recognition", "Security"],
+        "Recognized in Department of Defense Hall of Fame. Possition 37 globally",
+      tags: ["Bug Bounty", "Recognition", "HOF"],
     },
     {
-      title: "Cybersecurity Speaker",
+      title: "Jr Penetration Tester Intern",
       image:
         "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
       description:
-        "Featured speaker at cybersecurity conferences and webinars, sharing knowledge on offensive security.",
-      tags: ["Speaking", "Conference", "Education"],
+        "Completed a successful internship as a Jr Penetration Tester at Byte Capsule, gaining hands-on experience in vulnerability assessments and security testing.",
+      tags: ["Internship", "Real-World Experience", "Education"],
     },
     {
       title: "Open Source Contributor",
