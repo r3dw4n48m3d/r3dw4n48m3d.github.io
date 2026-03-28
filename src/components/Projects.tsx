@@ -14,52 +14,52 @@ export default function Projects() {
       title: "Hacker-WriteUps Telegram Channel",
       category: "Post Daily Write-Ups",
       image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
+        "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/achievements/hacker-write-ups-telegram.png",
       description:
         "A Telegram channel dedicated to sharing daily penetration testing write-ups.",
       tags: ["Telegram", "Daily Updates", "Write-Ups"],
       link: "https://t.me/bugbountywrite_ups",
     },
-    {
-      title: "Remote & Local Credential Harvesting",
-      category: "Infrastructure",
-      image:
-        "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
-      description:
-        "Demonstrated credential harvesting techniques in Active Directory environments using Mimikatz, SAM dumps, LSASS extraction, and DCSync attacks.",
-      tags: ["Mimikatz", "Active Directory", "Credential Theft"],
-      link: "#",
-    },
-    {
-      title: "Kerberos Unconstrained Delegation Abuse",
-      category: "Infrastructure",
-      image:
-        "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=400&h=300&fit=crop",
-      description:
-        "Full exploitation of Kerberos unconstrained delegation misconfigurations to achieve domain-level compromise through TGT extraction and impersonation.",
-      tags: ["Kerberos", "Delegation", "Domain Admin"],
-      link: "#",
-    },
-    {
-      title: "AdminSDHolder Persistence",
-      category: "Infrastructure",
-      image:
-        "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=300&fit=crop",
-      description:
-        "Demonstrated persistence through AdminSDHolder ACL abuse, maintaining backdoor access to privileged AD groups through SDProp propagation.",
-      tags: ["AdminSDHolder", "ACL Abuse", "Persistence"],
-      link: "#",
-    },
-    {
-      title: "Automated Vulnerability Scanner",
-      category: "Tool Development",
-      image:
-        "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=300&fit=crop",
-      description:
-        "Custom Python-based vulnerability scanner integrating multiple security tools for comprehensive network and web application assessment.",
-      tags: ["Python", "Automation", "Security Tools"],
-      link: "#",
-    },
+    // {
+    //   title: "Remote & Local Credential Harvesting",
+    //   category: "Infrastructure",
+    //   image:
+    //     "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
+    //   description:
+    //     "Demonstrated credential harvesting techniques in Active Directory environments using Mimikatz, SAM dumps, LSASS extraction, and DCSync attacks.",
+    //   tags: ["Mimikatz", "Active Directory", "Credential Theft"],
+    //   link: "#",
+    // },
+    // {
+    //   title: "Kerberos Unconstrained Delegation Abuse",
+    //   category: "Infrastructure",
+    //   image:
+    //     "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=400&h=300&fit=crop",
+    //   description:
+    //     "Full exploitation of Kerberos unconstrained delegation misconfigurations to achieve domain-level compromise through TGT extraction and impersonation.",
+    //   tags: ["Kerberos", "Delegation", "Domain Admin"],
+    //   link: "#",
+    // },
+    // {
+    //   title: "AdminSDHolder Persistence",
+    //   category: "Infrastructure",
+    //   image:
+    //     "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=300&fit=crop",
+    //   description:
+    //     "Demonstrated persistence through AdminSDHolder ACL abuse, maintaining backdoor access to privileged AD groups through SDProp propagation.",
+    //   tags: ["AdminSDHolder", "ACL Abuse", "Persistence"],
+    //   link: "#",
+    // },
+    // {
+    //   title: "Automated Vulnerability Scanner",
+    //   category: "Tool Development",
+    //   image:
+    //     "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=300&fit=crop",
+    //   description:
+    //     "Custom Python-based vulnerability scanner integrating multiple security tools for comprehensive network and web application assessment.",
+    //   tags: ["Python", "Automation", "Security Tools"],
+    //   link: "#",
+    // },
   ];
 
   return (
