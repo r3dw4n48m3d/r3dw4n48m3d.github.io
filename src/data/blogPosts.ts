@@ -39,7 +39,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-28",
     readTime: "5 min",
     tags: ["Next.js", "Reconnaissance", "Web Security", "Bug Bounty"],
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
+    image:
+      "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/next-js-recon-tips-to-discover-all-paths/image.png",
     author: "Redwan Ahmed",
     content: [
       {
@@ -86,7 +87,7 @@ javascript:console.log(__BUILD_MANIFEST.sortedPages.join('\n'));`,
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
+        src: "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/next-js-recon-tips-to-discover-all-paths/image.png",
         alt: "Next.js Recon Tips",
         caption: "Discover all paths in a Next.js website",
       },
