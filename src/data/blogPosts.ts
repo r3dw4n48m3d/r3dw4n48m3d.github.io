@@ -119,6 +119,16 @@ javascript:console.log(__BUILD_MANIFEST.sortedPages.join('\n'));`,
       },
     ],
   },
+  {
+    id: "2",
+    slug: "bug-bounty-methodology-part-one",
+    title: "Bug Bounty Methodology - Part One",
+    description: "All steps clearly listed for beginners to advanced hunters",
+    date: "2024-04-16",
+    readTime: "10 min",
+    tags: ["Bug Bounty", "Methodology", "Tutorial", "Security Research"],
+    
+  },
   //   {
   //     id: "1",
   //     slug: "how-i-hacked-into-a-banking-app",
