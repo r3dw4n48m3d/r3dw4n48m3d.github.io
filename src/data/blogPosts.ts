@@ -31,6 +31,8 @@ export interface BlogContent {
 }
 
 export const blogPosts: BlogPost[] = [
+  // Write-Ups 01 : Next.js Recon Tips to Discover All Paths
+
   {
     id: "1",
     slug: "next-js-recon-tips-to-discover-all-paths",
@@ -119,15 +121,274 @@ javascript:console.log(__BUILD_MANIFEST.sortedPages.join('\n'));`,
       },
     ],
   },
+
+  // Write-Ups 02 : Bug Bounty Methodology - Part One
+
   {
     id: "2",
     slug: "bug-bounty-methodology-part-one",
     title: "Bug Bounty Methodology - Part One",
     description: "All steps clearly listed for beginners to advanced hunters",
-    date: "2024-04-16",
+    date: "2026-04-16",
     readTime: "10 min",
     tags: ["Bug Bounty", "Methodology", "Tutorial", "Security Research"],
-    
+    image:
+      "https://raw.githubusercontent.com/r3dw4n48m3d/r3dw4n48m3d.github.io/refs/heads/main/src/images/bug-bounty-methodology-part-one/cover.png",
+    author: "Redwan Ahmed",
+    content: [
+      {
+        type: "callout",
+        variant: "success",
+        content: "Assalamu Alaikum!",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Introduction",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Before starting the Bug Bounty Methodology, let's understand what bug bounty methodology is?? ",
+      },
+      {
+        type: "blockquote",
+        content:
+          "Bug bounty methodology is a structured approach to finding and reporting security vulnerabilities in software applications. It involves a systematic process of reconnaissance, vulnerability identification, exploitation, and responsible disclosure. This methodology helps security researchers and bug bounty hunters to effectively discover and report vulnerabilities while ensuring that they follow ethical guidelines and best practices.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Bug Bounty Methodology",
+      },
+      {
+        type: "paragraph",
+        content: "Here are the steps of the bug bounty methodology:",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "SUBDOMAIN ENUMERATION",
+      },
+      {
+        type: "paragraph",
+        content: "Used subfinder to fetch all subdomains recursively.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content: `subfinder -d example.com -all -recursive > subdomains.txt`,
+      },
+      {
+        type: "callout",
+        variant: "success",
+        content: "Use as many API keys as you can to fetch more subdomains.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "FETCH ALL SUBDOMAINS FROM CRT.SH",
+      },
+      {
+        type: "paragraph",
+        content: "This one-liner fetches all subdomains from crt.sh.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content:
+          "curl -s https://crt.sh/?q=example.com&output=json | jq -r '.[] | .name_value' | grep -Po '(\\w+.\\w+.\\w+.)$'",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "CHECK ALIVE HOSTS",
+      },
+      {
+        type: "paragraph",
+        content:
+          "After getting subdomains, use httpx-toolkit to check which ones are alive.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content:
+          "cat subdomain.txt | httpx-toolkit -ports 80,8080,8000,8888 -threads 200 > subdomains_alive.txt",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "OPEN PORT SCAN (NAABU)",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For checking open ports, I used naabu. It's very fast. It helps find running services and potentially vulnerable versions to exploit.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content:
+          "naabu -list subdomains.txt -c 50 -nmap-cli 'nmap -sV -sC' -o naabu-full.txt",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "DIRECTORY AND FILE FINDING",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Used **dirsearch** with onelistforall list — this contains many sensitive file/dir paths.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "I included only important status codes and avoided using ffuf because it's noisy and often blocked.",
+      },
+      {
+        type: "blockquote",
+        content: "Dirsearch gives clean and colorful output.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content:
+          "dirsearch -l subdomains_alive.txt -i 200,204,403 -x 500,502,429 -R 5 --random-agent -t 50 -F -w wordlist.txt -o directory.txt",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "GET ALL PASSIVE URLS (GAU)",
+      },
+      {
+        type: "paragraph",
+        content:
+          "To get all URLs from archives, I use gau (better than wayback) — it pulls from many sources.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Then I use uro to filter out duplicate and non-parameter URLs.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content: `cat subdomains_alive.txt | gau > newparameter.txt
+
+cat newparameter.txt | uro > fileteredparameter.txt`,
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "FIND JAVASCRIPT FILES",
+      },
+      {
+        type: "paragraph",
+        content:
+          "JS files can leak sensitive info (keys, tokens, endpoints). Use grep to extract .js files.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content: `cat fileteredparameter.txt | grep ".js$" > jsfiles.txt`,
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "FIND SECRET KEYS IN JS FILES",
+      },
+      {
+        type: "paragraph",
+        content:
+          "I use a one-liner to run SecretFinder on each JS file. It finds secrets like AWS keys, Google captchas, Twilio creds.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content: `cat jsfiles.txt | while read url; do python3 SecretFinder/SecretFinder.py -i $url -o cli >> secret.txt; done
+
+cat secret.txt | grep aws
+cat secret.txt | grep key
+cat secret.txt | grep API
+cat secret.txt | grep API_KEY
+cat secret.txt | grep google captcha
+cat secret.txt | grep twilio`,
+      },
+      {
+        type: "callout",
+        variant: "success",
+        content: "Find with different keywords to get more secrets.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "SCAN VULNERABILITIES WITH NUCLEI + CUSTOM TEMPLATES",
+      },
+      {
+        type: "paragraph",
+        content:
+          "I send all filtered URLs and params to Nuclei using custom templates.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content: `nuclei -l fileteredparameter.txt -t custom-templates/ -o nuclei.txt`,
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "SEPARATE VULNERABILITIES WITH TAGGED TOOLS",
+      },
+      {
+        type: "paragraph",
+        content: "You can use tools focused on specific vulnerabilities:",
+      },
+      {
+        type: "list",
+        items: [
+          "For XSS: dalfox",
+          "For Open Redirect: openredirex",
+          "For LFI: dotdotpwn, lfisuite",
+        ],
+      },
+      {
+        type: "paragraph",
+        content: "Filter using Gf patterns, then pass to Nuclei with tags.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        content:
+          "nuclei -list filterd_parameter.txt --tags xss, open-redirect,lfi",
+      },
+      {
+        type: "callout",
+        variant: "danger",
+        content:
+          "This is not the end. You have to manually verify and exploit the vulnerabilities you find. Always follow responsible disclosure guidelines when reporting bugs.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Thanks for reading! If you have any questions or want to share your own tips, feel free to reach out on Twitter orconnect with me on LinkedIn.",
+      },
+      {
+        type: "callout",
+        variant: "success",
+        content: "Twitter : @r3dw4n48m3d",
+      },
+      {
+        type: "callout",
+        variant: "success",
+        content: "LinkedIn : @r3dw4n-48m3d",
+      },
+      {
+        type: "callout",
+        variant: "danger",
+        content: "Logged Out",
+      },
+    ],
   },
   //   {
   //     id: "1",
